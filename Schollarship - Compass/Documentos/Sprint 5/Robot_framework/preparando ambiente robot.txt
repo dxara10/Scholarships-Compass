@@ -1,0 +1,14 @@
+preparando ambiente robot
+
+crie maquina virtual
+ative ela
+
+instale o node.js
+onstale o python se não estiver instalado
+
+instale o robotframework
+instale o robotframework-browser
+instale o robotframework-requests
+instale o robotframework-faker
+
+
