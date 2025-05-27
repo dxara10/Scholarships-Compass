@@ -1,0 +1,10 @@
+{
+    "Usuario_Valido":{
+        "email": "fulano@qa.com",
+        "password": "teste"
+    },
+    "Usuario_Invalido":{
+        "email": "fulaninho@qa.com",
+        "password": ""
+    }
+}

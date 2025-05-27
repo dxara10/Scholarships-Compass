@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.7 on linux)" generated="2025-05-27T16:20:04.593253" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="/home/cortes/Documents/Compass Estágio/GIT/Schollarship - Compass/Documentos/Sprint 6/ServerRest_Robot/Tests/test_login.robot">
+<test id="s1-t1" name="POST Fazer Login" line="13">
+<kw name="Criar Sessão" owner="usuario">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-05-27T16:20:05.109125" level="INFO">Creating Session using : alias=ServerRest, url=https://serverest.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>ServerRest</arg>
+<arg>https://serverest.com/api</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-05-27T16:20:05.108925" elapsed="0.000577"/>
+</kw>
+<status status="PASS" start="2025-05-27T16:20:05.107724" elapsed="0.001896"/>
+</kw>
+<kw name="POST Endpoint /login" owner="login">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-27T16:20:05.110936" level="INFO">&amp;{payload} = { email=fulano@qa.com | senha=teste }</msg>
+<var>&amp;{payload}</var>
+<arg>email=${email}</arg>
+<arg>senha=${senha}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-27T16:20:05.110332" elapsed="0.000664"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>&amp;{response}</var>
+<arg>ServerRest</arg>
+<arg>/login</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-05-27T16:20:05.111169" elapsed="10.743078">Execution terminated by signal</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Response: ${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-05-27T16:20:15.854525" elapsed="0.000040"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2025-05-27T16:20:15.854718" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2025-05-27T16:20:05.109953" elapsed="10.744951">Execution terminated by signal</status>
+</kw>
+<status status="FAIL" start="2025-05-27T16:20:05.106853" elapsed="10.748336">Execution terminated by signal</status>
+</test>
+<doc>Arquivo de requisições do sistema</doc>
+<status status="FAIL" start="2025-05-27T16:20:04.594762" elapsed="11.260958"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Login" id="s1" pass="0" fail="1" skip="0">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-27T16:20:04.792903" level="WARN">Error in file '/home/cortes/Documents/Compass Estágio/GIT/Schollarship - Compass/Documentos/Sprint 6/ServerRest_Robot/Tests/dinamics.robot' on line 18: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-05-27T16:20:05.097373" level="WARN">Error in file '/home/cortes/Documents/Compass Estágio/GIT/Schollarship - Compass/Documentos/Sprint 6/ServerRest_Robot/Tests/common.robot' on line 16: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
